@@ -45,12 +45,20 @@
     Hello World
 
     <script>
-      // collect cookies and write to document
-      cookies = Object.fromEntries(
-        document.cookie.split("; ").map((c) => c.split("="))
-      );
-      for (const [key, value] of Object.entries(cookies))
-        document.createTextNode(`${key}: ${value}`);
+    function showCookies() {
+  const output = document.getElementById("cookies");
+  output.textContent = `> ${document.cookie}`;
+}
+
+
     </script>
+
+<button onclick="showCookies()">Show cookies</button>
+
+<button onclick="clearOutputCookies()">Clear</button>
+
+<div>
+  <code id="cookies"></code>
+</div>
   </body>
 </html>
