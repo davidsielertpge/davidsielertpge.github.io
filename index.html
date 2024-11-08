@@ -118,16 +118,6 @@
 <body>
   Welcome to David's Cookie Blocking Test Site
 
-  <script>
-    function showCookies() {
-      const output = document.getElementById("cookies");
-      output.textContent = `> ${document.cookie.replace(";", ";<br/>")}`;
-    }
-
-    (function () {
-      showCookies()
-    })
-  </script>
 
   <button onclick="showCookies()">Show Active cookies</button>
 
@@ -142,6 +132,17 @@
   <!-- OneTrust Cookies List start -->
   <div id="ot-sdk-cookie-policy"></div>
   <!-- OneTrust Cookies List end -->
+  <script>
+    function showCookies() {
+      const output = document.getElementById("cookies");
+      output.textContent = `> ${document.cookie.replace(";", ";<br/>")}`;
+    }
+
+    (function () {
+      showCookies()
+    })
+  </script>
+
 </body>
 
 </html>
