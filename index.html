@@ -121,7 +121,7 @@
   <script>
     function showCookies() {
       const output = document.getElementById("cookies");
-      output.textContent = `> ${document.cookie}`;
+      output.textContent = `> ${document.cookie.replace(";", ";<br/>")}`;
     }
 
     (function () {
