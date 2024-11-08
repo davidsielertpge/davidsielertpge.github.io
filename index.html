@@ -1,64 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- OneTrust Cookies Consent Notice start for davidsielertpge.github.io -->
-    <script
-      src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-      type="text/javascript"
-      charset="UTF-8"
-      data-domain-script="0192fd4d-030b-7c9f-ae48-6ee139988bdf"
-    ></script>
-    <script type="text/javascript">
-      function OptanonWrapper() {}
-    </script>
-    <!-- OneTrust Cookies Consent Notice end for davidsielertpge.github.io -->
-    <script
-      type="text/javascript"
-      src="/advertising.js"
-      class="optanon-category-C0004"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/analytics.js"
-      class="optanon-category-C0002"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/functional.js"
-      class="optanon-category-C0003"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/marketing.js"
-      class="optanon-category-C0004"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/necessary.js"
-      class="optanon-category-C0001"
-    ></script>
-  </head>
-  <body>
-    Welcome to David's Cookie Blocking Test Site
 
-    <script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- OneTrust Cookies Consent Notice start for davidsielertpge.github.io -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="0192fd4d-030b-7c9f-ae48-6ee139988bdf"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for davidsielertpge.github.io -->
+  <script type="text/plain" src="/advertising.js" class="optanon-category-C0004"></script>
+  <script type="text/plain" src="/analytics.js" class="optanon-category-C0002"></script>
+  <script type="text/plain" src="/functional.js" class="optanon-category-C0003"></script>
+  <script type="text/plain" src="/marketing.js" class="optanon-category-C0004"></script>
+  <script type="text/plain" src="/necessary.js" class="optanon-category-C0001"></script>
+</head>
+
+<body>
+  Welcome to David's Cookie Blocking Test Site
+
+  <script>
     function showCookies() {
-  const output = document.getElementById("cookies");
-  output.textContent = `> ${document.cookie}`;
-}
+      const output = document.getElementById("cookies");
+      output.textContent = `> ${document.cookie}`;
+    }
 
 
-    </script>
+  </script>
 
-<button onclick="showCookies()">Show cookies</button>
+  <button onclick="showCookies()">Show cookies</button>
 
-<button onclick="clearOutputCookies()">Clear</button>
+  <button onclick="clearOutputCookies()">Clear</button>
+  <!-- OneTrust Cookies Settings button start -->
+  <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+  <!-- OneTrust Cookies Settings button end -->
+  <div>
+    <code id="cookies"></code>
+  </div>
+  <h2>OT Cookie List</h2>
+  <!-- OneTrust Cookies List start -->
+  <div id="ot-sdk-cookie-policy"></div>
+  <!-- OneTrust Cookies List end -->
+</body>
 
-<div>
-  <code id="cookies"></code>
-</div>
-  </body>
 </html>
