@@ -124,10 +124,12 @@
       output.textContent = `> ${document.cookie}`;
     }
 
-
+    (function () {
+      showCookies()
+    })
   </script>
 
-  <button onclick="showCookies()">Show cookies</button>
+  <button onclick="showCookies()">Show Active cookies</button>
 
   <button onclick="clearOutputCookies()">Clear</button>
   <!-- OneTrust Cookies Settings button start -->
