@@ -148,6 +148,9 @@
     (function () {
       showCookies()
     })();
+    window.addEventListener(“OneTrustGroupsUpdated”, event => {
+      console.log(`The following groups are now active: ${event.detail.join(“, “)}`)
+    });
   </script>
 
 </body>
