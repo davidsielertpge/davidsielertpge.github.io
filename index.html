@@ -159,6 +159,7 @@
     // https://my.onetrust.com/s/article/UUID-bc6c634c-b234-acc7-21d3-fa2819a6e679
     window.addEventListener("OneTrustGroupsUpdated", event => {
       console.log(`The following groups are now active: ${event.detail.join(", ")} `)
+      showCookies()
     });
     window.addEventListener("OTConsentApplied", event => {
       console.log("The user has updated their consent.")
