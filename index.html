@@ -151,6 +151,11 @@
     window.addEventListener(“OneTrustGroupsUpdated”, event => {
       console.log(`The following groups are now active: ${event.detail.join(“, “)}`)
     });
+    Window.addEventListener(“OTConsentApplied”, event => {
+      console.log(“The user has updated their consent.”)
+      console.log(`Reference OnetrustActiveGroups for updated consent = ${OnetrustActiveGroups}`)
+    });
+
   </script>
 
 </body>
