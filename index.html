@@ -140,9 +140,17 @@
   <div id="ot-sdk-cookie-policy"></div>
   <!-- OneTrust Cookies List end -->
   <script>
+    function getCookieNames() {
+      cookies = Array();
+      document.cookie.split("; ").forEach((val, index) => {
+        cookies.push(val.split("=")[0]);
+      });
+      return cookies
+    }
+
     function showCookies() {
       const output = document.getElementById("cookies");
-      output.textContent = `> ${document.cookie.replaceAll(";", ";\n")}`;
+      output.textContent = `> ${getCookieNames().join("\n")}";
     }
 
     (function () {
@@ -150,7 +158,7 @@
     })();
     // https://my.onetrust.com/s/article/UUID-bc6c634c-b234-acc7-21d3-fa2819a6e679
     window.addEventListener("OneTrustGroupsUpdated", event => {
-      console.log(`The following groups are now active: ${event.detail.join(", ")}`)
+      console.log(`The following groups are now active: ${event.detail.join(", ")} `)
     });
     window.addEventListener("OTConsentApplied", event => {
       console.log("The user has updated their consent.")
