@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <!-- OneTrust Cookies Consent Notice start for davidsielertpge.github.io -->
+  <script type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/0192fd4d-030b-7c9f-ae48-6ee139988bdf/OtAutoBlock.js"></script>
   <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
     data-domain-script="0192fd4d-030b-7c9f-ae48-6ee139988bdf"></script>
   <script type="text/javascript">
@@ -166,6 +168,7 @@
       window.addEventListener("OTConsentApplied", event => {
         console.log("The user has updated their consent.")
         console.log(`Reference OnetrustActiveGroups for updated consent = ${OnetrustActiveGroups}`)
+        window.location.reload();
       });
     })();
 
