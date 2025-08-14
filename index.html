@@ -164,11 +164,11 @@
       window.addEventListener("OneTrustGroupsUpdated", event => {
         console.log(`The following groups are now active: ${event.detail.join(", ")} `)
         showCookies()
-        window.location.reload();
       });
       window.addEventListener("OTConsentApplied", event => {
         console.log("The user has updated their consent.")
         console.log(`Reference OnetrustActiveGroups for updated consent = ${OnetrustActiveGroups}`)
+        window.location.reload();
       });
     })();
 
